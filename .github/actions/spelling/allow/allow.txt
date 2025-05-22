@@ -29,9 +29,11 @@ flac
 gantt
 gfm
 ghe
+github
 gje
 godbolt
 hstrings
+https
 hyperlinking
 hyperlinks
 Kbds
@@ -78,6 +80,7 @@ servicebus
 shcha
 similaritytolerance
 slnt
+ssh
 stakeholders
 subpage
 sustainability
@@ -86,6 +89,7 @@ TLDR
 tonos
 toolset
 tshe
+ubuntu
 UEFI
 uiatextrange
 und
