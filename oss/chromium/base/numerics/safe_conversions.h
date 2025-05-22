@@ -106,7 +106,7 @@ template <typename Dst,
           typename Src>
 constexpr Dst checked_cast(Src value) {
   // This throws a compile-time error on evaluating the constexpr if it can be
-  // determined at compile-time as failing, otherwise it will CHECK at runtime.
+  // determined at compile-time as failing; otherwise, it will CHECK at runtime.
   using SrcType = typename internal::UnderlyingType<Src>::type;
   return BASE_NUMERICS_LIKELY((IsValueInRangeForNumericType<Dst>(value)))
              ? static_cast<Dst>(static_cast<SrcType>(value))
