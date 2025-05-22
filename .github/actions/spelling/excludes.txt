@@ -121,8 +121,8 @@ Resources/(?!en)
 ^tools/ReleaseEngineering/ServicingPipeline\.ps1$
 ^XamlStyler\.json$
 ^\.github/actions/spelling/
+^\.github/workflows/spelling\d*\.yml$
 ^\.vsconfig$
-^\Q.github/workflows/spelling.yml\E$
 ^\Qbuild/config/release.gdnbaselines\E$
 ^\Qdep/WinAppDriver/EULA.rtf\E$
 ^\Qdoc/reference/windows-terminal-logo.ans\E$

@@ -1009,7 +1009,7 @@ void AdaptDispatch::_ChangeRectOrStreamAttributes(const til::rect& changeArea, c
     // top line is altered from the left offset up to the end of the line. The
     // bottom line is altered from the start up to the right offset. All the
     // lines in-between have their entire length altered. The right coordinate
-    // must be greater than the left, otherwise the operation is ignored.
+    // must be greater than the left; otherwise, the operation is ignored.
     else if (lineCount > 1 && changeRect.right > changeRect.left)
     {
         const auto pageWidth = page.Width();
@@ -1327,7 +1327,7 @@ void AdaptDispatch::RequestChecksumRectangularArea(const VTInt id, const VTInt p
                 // As part of the checksum, we need to include the color indices of each
                 // cell, and in the case of default colors, those indices come from the
                 // color alias table. But if they're not in the bottom 16 range, we just
-                // fallback to using white on black (7 and 0).
+                // fall back to using white on black (7 and 0).
                 auto defaultFgIndex = _renderSettings.GetColorAliasIndex(ColorAlias::DefaultForeground);
                 auto defaultBgIndex = _renderSettings.GetColorAliasIndex(ColorAlias::DefaultBackground);
                 defaultFgIndex = defaultFgIndex < 16 ? defaultFgIndex : 7;
@@ -2465,7 +2465,7 @@ bool AdaptDispatch::_DoLineFeed(const Page& page, const bool withReturn, const b
         _api.NotifyBufferRotation(1);
 
         // We trigger a scroll rather than a redraw, since that's more efficient,
-        // but we need to turn the cursor off before doing so, otherwise a ghost
+        // but we need to turn the cursor off before doing so; otherwise, a ghost
         // cursor can be left behind in the previous position.
         cursor.SetIsOn(false);
         textBuffer.TriggerScroll({ 0, -1 });
@@ -2879,7 +2879,7 @@ void AdaptDispatch::AcceptC1Controls(const bool enabled)
 void AdaptDispatch::SendC1Controls(const bool enabled)
 {
     // If this is an attempt to enable C1 controls, the input code page must be
-    // one of the DOCS choices (UTF-8 or ISO-8859-1), otherwise there's a risk
+    // one of the DOCS choices (UTF-8 or ISO-8859-1); otherwise, there's a risk
     // that those controls won't have a valid encoding.
     const auto codepage = _api.GetInputCodePage();
     if (enabled == false || codepage == CP_UTF8 || codepage == 28591)
@@ -4184,7 +4184,7 @@ ITermDispatch::StringHandler AdaptDispatch::RequestSetting()
         {
             // Although we don't yet support any operations with parameter
             // prefixes, it's important that we still parse the prefix and
-            // include it in the ID. Otherwise we'll mistakenly respond to
+            // include it in the ID. Otherwise, we'll mistakenly respond to
             // prefixed queries that we don't actually recognise.
             const auto isParameterPrefix = ch >= L'<' && ch <= L'?';
             const auto isParameter = ch >= L'0' && ch < L'9';
