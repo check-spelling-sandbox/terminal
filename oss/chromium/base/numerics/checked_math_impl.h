@@ -266,7 +266,7 @@ struct CheckedLshOp {};
 
 // Left shift. Shifts less than 0 or greater than or equal to the number
 // of bits in the promoted type are undefined. Shifts of negative values
-// are undefined. Otherwise it is defined when the result fits.
+// are undefined. Otherwise, it is defined when the result fits.
 template <typename T, typename U>
 struct CheckedLshOp<T,
                     U,
