@@ -1,0 +1,1 @@
+^src/tools/U8U16Test/fr\.txt$
