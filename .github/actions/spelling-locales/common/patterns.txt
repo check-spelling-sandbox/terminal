@@ -5,19 +5,23 @@ xml:space="preserve"
 
 </?xsd:.*?>
 
+<resheader name="(?:read|writ)er">
+
 FileName=".*?"
 
 \b(?:ALT|CTRL)\+
 
-\bClearType\b
+\b(?:ClearType|FLIP_SEQUENTIAL|startingDirectory|WSL|XAML Islands)\b
+
+&lt;Separator&gt;
 
 # locked
-\btabTitle\b
+\b(?:colorScheme|splitPane|tabTitle)\b
 
 # xml tags
-AdditionalAssets|AdditionalLicenseTerms|AppFeature|AppFeatures|AppStoreName|Description|DevStudio|Images|Keyword|Keywords|MinimumHardware|PrivacyPolicyURL|ProductDescription|Recommendation|RecommendedHardware|ReleaseNotes|ShortDescription|ShortTitle|SortTitle|SupportContactInfo|Title|Trailers|VoiceTitle|WebsiteURL
+\b(?:AdditionalAssets|AdditionalLicenseTerms|AppFeature|AppFeatures|AppStoreName|Description|DevStudio|Images|Keyword|Keywords|MinimumHardware|PrivacyPolicyURL|ProductDescription|Recommendation|RecommendedHardware|ReleaseNotes|ShortDescription|ShortTitle|SortTitle|SupportContactInfo|Title|Trailers?|VoiceTitle|WebsiteURL)\b
 
-<value>System.Resources.ResXResourceReader, System.Windows.Forms, .*</value>
+<value>System.Resources.ResXResource(?:Read|Writ)er, System.Windows.Forms, .*</value>
 
 # Automatically suggested patterns
 
