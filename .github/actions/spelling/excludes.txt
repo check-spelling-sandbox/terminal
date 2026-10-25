@@ -105,6 +105,9 @@ Resources/(?!en)
 ^oss/.*?/
 ^samples/PixelShaders/Screenshots/
 ^src/cascadia/TerminalSettingsEditor/SegoeFluentIconList.h$
+^src/host/ft_host/chafa\.txt$
+^src/host/ft_uia/run\.bat$
+^src/host/runft\.bat$
 ^src/interactivity/onecore/BgfxEngine\.
 ^src/renderer/atlas/
 ^src/renderer/wddmcon/WddmConRenderer\.
@@ -118,6 +121,8 @@ Resources/(?!en)
 ^src/tools/benchcat
 ^src/tools/ConsoleBench
 ^src/tools/integrity/packageuwp/ConsoleUWP\.appxSources$
+^src/tools/lnkd/lnkd\.bat$
+^src/tools/pixels/pixels\.bat$
 ^src/tools/RenderingTests/main\.cpp$
 ^src/tools/texttests/fira\.txt$
 ^src/tools/U8U16Test/(?!en)..\.
