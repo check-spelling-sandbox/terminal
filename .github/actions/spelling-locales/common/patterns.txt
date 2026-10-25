@@ -3,3 +3,14 @@
 <comment>.*?</comment>
 
 </?xsd:.*?>
+
+# xml tags
+AdditionalAssets|AdditionalLicenseTerms|AppFeature|AppFeatures|AppStoreName|CopyrightAndTrademark|Description|DevStudio|Images|Keyword|Keywords|MinimumHardware|PrivacyPolicyURL|ProductDescription|Recommendation|RecommendedHardware|ReleaseNotes|ScreenshotCaptions|ShortDescription|ShortTitle|SortTitle|SupportContactInfo|Title|Trailers|VoiceTitle|WebsiteURL
+
+# Automatically suggested patterns
+
+# https/http/file urls
+(?:\b(?:https?|ftp|file)://)[-A-Za-z0-9+&@#/*%?=~_|!:,.;\\]+[-A-Za-z0-9+&@#/*%=~_|]
+
+# GitHub SHAs (markdown)
+(?:\[`?[0-9a-f]+`?\]\(https:/|)/(?:www\.|)github\.com(?:/[^/\s"]+){2,}(?:/[^/\s")]+)(?:[0-9a-f]+(?:[-0-9a-zA-Z/#.]*|)\b|)
