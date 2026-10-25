@@ -1,7 +1,0 @@
-^\.
-^build/
-^dep/
-^doc/
-^oss/
-^policies/
-^res/
