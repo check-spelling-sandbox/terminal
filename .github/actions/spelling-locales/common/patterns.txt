@@ -1,7 +1,5 @@
 <data name=".*?"
 
-<comment>.*?</comment>
-
 </?xsd:.*?>
 
 # xml tags
