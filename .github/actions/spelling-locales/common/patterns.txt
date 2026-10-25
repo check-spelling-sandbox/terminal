@@ -21,6 +21,8 @@ FileName=".*?"
 # xml tags
 \b(?:AdditionalAssets|AdditionalLicenseTerms|AppFeature|AppFeatures|AppStoreName|Description|DevStudio|Images|Keyword|Keywords|MinimumHardware|PrivacyPolicyURL|ProductDescription|Recommendation|RecommendedHardware|ReleaseNotes|ShortDescription|ShortTitle|SortTitle|SupportContactInfo|Title|Trailers?|VoiceTitle|WebsiteURL)\b
 
+</?root>
+
 <value>System.Resources.ResXResource(?:Read|Writ)er, System.Windows.Forms, .*</value>
 
 # Automatically suggested patterns
