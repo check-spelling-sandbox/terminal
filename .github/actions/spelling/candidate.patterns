@@ -39,13 +39,13 @@ index (?:[0-9a-z]{7,40},|)[0-9a-z]{7,40}\.\.[0-9a-z]{7,40}
 \bdata:[-a-zA-Z=;:/0-9+_]*,\S*
 
 # https/http/file urls
-#(?:\b(?:https?|ftp|file)://)[-A-Za-z0-9+&@#/*%?=~_|!:,.;]+[-A-Za-z0-9+&@#/*%=~_|]
+#(?:\b(?:https?|ftp|file)://)[-A-Za-z0-9+&@#/*%?=~_|!:,.;\\]+[-A-Za-z0-9+&@#/*%=~_|]
 
 # mailto urls
 mailto:[-a-zA-Z=;:/?%&0-9+@._]{3,}
 
 # magnet urls
-magnet:[?=:\w]+
+magnet:[?=:\w.]+
 
 # magnet urls
 "magnet:[^"]+"
@@ -75,6 +75,8 @@ magnet:[?=:\w]+
 
 # Amazon
 \bamazon\.com/[-\w]+/(?:dp/[0-9A-Z]+|)
+# AWS things
+\b(?:ami|fs|sg|subnet|vpc)-[0-9a-f]+\b
 # AWS ARN
 arn:aws:[-/:\w]+
 # AWS S3
@@ -85,8 +87,6 @@ arn:aws:[-/:\w]+
 \b\w+\.[-0-9a-z]+\.elb\.amazonaws\.com\b
 # AWS SNS
 \bsns\.[-0-9a-z]+.amazonaws\.com/[-\w/&#%_?:=]*
-# AWS VPC
-vpc-\w+
 
 # Azure AD
 \baad\.\w{48}\b
@@ -364,7 +364,7 @@ ipfs://[0-9a-zA-Z]{3,}
 /thread\.html/[^"\s]+
 
 # list-management
-\blist-manage\.com/subscribe(?:[?&](?:u|id)=[0-9a-f]+)+
+\blist-manage\.com/subscribe(?:/post|)(?:[?&](?:u|id)=[0-9a-f]+)+
 
 # kubectl.kubernetes.io/last-applied-configuration
 "kubectl.kubernetes.io/last-applied-configuration": ".*"
@@ -480,6 +480,9 @@ integrity=(['"])(?:\s*sha\d+-[-a-zA-Z=;:/0-9+]{40,})+\g{-1}
 # Localized .desktop content
 Name\[[^\]]+\]=.*
 
+# ... as a service
+\b[A-Z]aaS\b
+
 # IServiceProvider / isAThing
 (?:(?:\b|_|(?<=[a-z]))I|(?:\b|_)(?:nsI|isA))(?=(?:[A-Z][a-z]{2,})+(?:[A-Z\d]|\b))
 
@@ -505,13 +508,13 @@ Name\[[^\]]+\]=.*
 \bh1:\S+
 
 # golang print-f-style functions
-#(?i)(?<=append|comma|debug|equal|err|error|exit|fatal|format|info|log|name|panic|print|skip|scan|string|trace|true|warn|warning|wrap|write)(?:f|ln)(?:[ (]|$)
+#(?i)(?<=append|assert|comma|contains|debug|equal|err|error|exit|fatal|format|info|log|name|panic|print|skip|scan|string|trace|true|warn|warning|wrap|write)(?:f|ln)(?:[ (]|$)
 
 # golang regular expression
 #(?<!")\br".+?"
 
 # imports
-^import\s+(?:(?:static|type)\s+|)(?:[\w.]|\{\s*\w*?(?:,\s*(?:\w*|\*))+\s*\})+(?:\s+from (['"]).*?\g{-1}|)
+^import\s+(?:(?:static|type)\s+|)(?:\{(?:,?\s*(?:\w*(?:\s+as\s+\w+\s*|)|\*))*\s*\}|[\w.]+)(?:\s+from (['"]).*?|)
 
 # scala modules
 ("[^"]+"\s*%%?\s*){2,3}"[^"]+"
@@ -586,7 +589,7 @@ perl(?:\s+-[a-zA-Z]\w*)+
 regexp?\.MustCompile\((?:`[^`]*`|".*"|'.*')\)
 
 # regex choice
-#\((?=[^)]*[a-zA-Z]{3})(?:\?:|)[^)|]+(?<! )\|(?!(?:jq|xargs)\b)[^)| ][^)]*\)
+#\((?:\?:|)[^)|]+(?<! )\|(?!(?:jq|xargs)\b)[^)| ][^)]*\)
 
 # proto
 ^\s*(\w+)\s\g{-1} =
@@ -738,7 +741,7 @@ nolint:\s*[\w,]+
 [/\\][^/\\]{5,6}~\d{1,2}(?=[/\\])
 
 # Windows Resources with accelerators
-\b[A-Z]&[a-z]+\b(?!;)
+#\b[A-Z][a-z]*&[a-z]+\b(?!;)
 
 # signed off by
 (?i)Signed-off-by: .*
@@ -771,7 +774,7 @@ W/"[^"]+"
 # ignore long runs of a single character:
 \b([A-Za-z])\g{-1}{3,}\b
 
-# version suffix <word>v#
+# version suffix {word}v#
 (?:(?<=[A-Z]{2})V|(?<=[a-z]{2}|[A-Z]{2})v)\d+(?:\b|(?=[a-zA-Z_]))
 
 # Compiler flags (Unix, Java/Scala)
