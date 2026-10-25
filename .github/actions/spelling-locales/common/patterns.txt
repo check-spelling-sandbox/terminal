@@ -2,6 +2,8 @@
 
 </?xsd:.*?>
 
+FileName=".*?"
+
 # xml tags
 AdditionalAssets|AdditionalLicenseTerms|AppFeature|AppFeatures|AppStoreName|CopyrightAndTrademark|Description|DevStudio|Images|Keyword|Keywords|MinimumHardware|PrivacyPolicyURL|ProductDescription|Recommendation|RecommendedHardware|ReleaseNotes|ShortDescription|ShortTitle|SortTitle|SupportContactInfo|Title|Trailers|VoiceTitle|WebsiteURL
 
