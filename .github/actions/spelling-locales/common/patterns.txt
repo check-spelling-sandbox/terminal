@@ -16,6 +16,8 @@ FileName=".*?"
 # xml tags
 AdditionalAssets|AdditionalLicenseTerms|AppFeature|AppFeatures|AppStoreName|Description|DevStudio|Images|Keyword|Keywords|MinimumHardware|PrivacyPolicyURL|ProductDescription|Recommendation|RecommendedHardware|ReleaseNotes|ShortDescription|ShortTitle|SortTitle|SupportContactInfo|Title|Trailers|VoiceTitle|WebsiteURL
 
+<value>System.Resources.ResXResourceReader, System.Windows.Forms, .*</value>
+
 # Automatically suggested patterns
 
 # https/http/file urls
