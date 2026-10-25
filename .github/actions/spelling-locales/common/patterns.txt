@@ -6,6 +6,8 @@ FileName=".*?"
 
 \b(?:ALT|CTRL)\+
 
+\bClearType\b
+
 # locked
 \btabTitle\b
 
