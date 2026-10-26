@@ -7,7 +7,7 @@ FileName=".*?"
 
 \b(?i)(?:ALT|CTRL)\b
 
-\b(?:Microsoft Corporation|XAML Islands)\b
+\b(?:Azure Cloud Shell|Microsoft Corporation|PowerShell|Visual Studio|XAML Islands)\b
 
 &lt;Separator&gt;
 
