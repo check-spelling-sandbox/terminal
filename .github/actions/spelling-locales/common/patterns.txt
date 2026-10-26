@@ -3,8 +3,6 @@
 <data name=".*?"
 xml:space="preserve"
 
-<resheader name="(?:read|writ)er">
-
 FileName=".*?"
 
 \b(?:ALT|CTRL)\+
@@ -20,6 +18,9 @@ FileName=".*?"
 \b(?:AdditionalAssets|AdditionalLicenseTerms|AppFeature|AppFeatures|AppStoreName|Description|DevStudio|Images|Keyword|Keywords|MinimumHardware|PrivacyPolicyURL|ProductDescription|Recommendation|RecommendedHardware|ReleaseNotes|ShortDescription|ShortTitle|SortTitle|SupportContactInfo|Title|Trailers?|VoiceTitle|WebsiteURL)\b
 
 </?root>
+
+# html / sgml / xml
+&amp;
 
 <value>System.Resources.ResXResource(?:Read|Writ)er, System.Windows.Forms, .*</value>
 
