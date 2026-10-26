@@ -5,14 +5,14 @@ xml:space="preserve"
 
 FileName=".*?"
 
-\b(?:ALT|CTRL)\+
+\b(?i)(?:ALT|CTRL)\b
 
-\b(?:startingDirectory|XAML Islands)\b
+\b(?:Microsoft Corporation|XAML Islands)\b
 
 &lt;Separator&gt;
 
 # locked
-\b(?:/cygdrive/c|/mnt/c|AltGr|BEL|ClearType|colorScheme|Cygwin|DECRQCRA|ENQ|FLIP_DISCARD|FLIP_SEQUENTIAL|Kitty|Manipulate Selection Data|MinGW|MSYS2|OSC|Request Checksum of Rectangular Area|Request Terminal Status|splitPane|tabTitle|WARP|wcswidth|Windows|WSL)\b
+\b(?:__content|--help|/cygdrive/c|/mnt/c|AltGr|backgroundImage|BEL|ClearType|colorScheme|command|Cygwin|DECRQCRA|defaults\.json|defaultProfile|ENQ|FLIP_DISCARD|FLIP_SEQUENTIAL|focus-pane|focus-tab|icon|iterateOn|keys|Kitty|Manipulate Selection Data|MinGW|move-focus|move-pane|MSYS2|name|new-tab|newTabMenu|OSC|remainingProfiles|Request Checksum of Rectangular Area|Request Terminal Status|schemes|settings\.json|size|split-pane|splitPane|startingDirectory|startupActions|tabTitle|title|WARP|wcswidth|Windows|WSL)\b
 
 # xml tags
 \b(?:AdditionalAssets|AdditionalLicenseTerms|AppFeature|AppFeatures|AppStoreName|Description|DevStudio|Images|Keyword|Keywords|MinimumHardware|PrivacyPolicyURL|ProductDescription|Recommendation|RecommendedHardware|ReleaseNotes|ShortDescription|ShortTitle|SortTitle|SupportContactInfo|Title|Trailers?|VoiceTitle|WebsiteURL)\b
