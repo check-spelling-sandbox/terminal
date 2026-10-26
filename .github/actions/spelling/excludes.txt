@@ -13,7 +13,6 @@
 (?:^|/)sources(?:|\.dep)$
 (?:^|/)vendor/
 (?:^|/|\b)requirements(?:-dev|-doc|-test|)\.txt$
-ignore$
 Resources/(?!en)
 [^/]\.vsdx$
 -lock\.yaml$
